@@ -1,0 +1,1 @@
+This is a collection of two open source tools that are very powerful for quickly auditing GCP and AWS accounts. The file also has the install of OKTA Processor. The files has install, set up and run instructions. Enjoy!
