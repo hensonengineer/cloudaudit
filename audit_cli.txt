@@ -1,0 +1,45 @@
+
+
+# Prowler - Open Source Tool for Cloud Audit
+Prowler (https://github.com/prowler-cloud/prowler) 
+
+# ScoutSuite - Open source Tool for Cloud Audit
+ScoutSuite (https://github.com/nccgroup/ScoutSuite)
+
+# OKTA Processor
+#install of okta processor
+sudo pip install aws-okta-processor
+
+# Install GCP Command line if you don't have it
+#install of GCP
+curl https://sdk.cloud.google.com | bash
+gcloud init
+gloud auth login
+
+#install of Prowler
+mkdir /Prowker
+cd /Prowler
+sudo pip3 install prowler
+
+#install of ScoutSuite
+cd ~
+mkdir /Scoutsuite
+cd /Scoutsuite
+sudo pip3 install scoutsuite
+
+
+#working in AWS with OKTA
+aws sts get-caller-identity 
+switchrole='rm ~/.aws/boto/cache/*'
+
+#getting GCP to work with scoutsuite for this error
+2023-11-13 14:02:29 Chriss-MacBook-Pro.local scout[55865] ERROR __main__.py L205: Authentication failure: Your default credentials were not found. To set up Application Default Credentials, see https://cloud.google.com/docs/authentication/external/set-up-adc for more information.
+
+#log in as application
+gcloud auth application-default login
+scout gcp --user-account --project-id [id] 
+
+#prowler GCP
+gcloud config set project core-369409
+prowler gcp --project-ids core-369409
+
